@@ -1,4 +1,5 @@
 import './App.css';
+import './media-queries.scss';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';

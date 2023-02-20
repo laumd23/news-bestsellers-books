@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../Context/GlobalState';
 import './Home.scss';
-import '../../media-queries.scss';
 
 const Home = () => {
   const { books, getOverview } = useContext(GlobalContext);

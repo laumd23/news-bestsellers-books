@@ -4,7 +4,8 @@ import axios from 'axios';
 
 const initialState = {
   books: [],
-  fullBooks: []
+  fullBooks: [],
+  formData: {},
 };
 
 export const GlobalContext = createContext(initialState);
@@ -40,13 +41,22 @@ export const GlobalProvider = ({ children }) => {
       console.error(error);
     }
   }
+  const getFormData = (objectData) =>{
+    dispatch ({
+      type: 'GET_FORM_DATA',
+      payload: objectData
+    })
+  }
+
   return (
     <GlobalContext.Provider
       value={{
         books: state.books,
         getOverview,
         fullBooks: state.fullBooks,
-        getFullOverview
+        getFullOverview,
+        formData: state.formData,
+        getFormData
       }}
     >
       {children}

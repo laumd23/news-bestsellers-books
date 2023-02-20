@@ -43,3 +43,17 @@ footer {
   font-size: 15px;
   padding-right: 45px;
 }
+
+@media only screen and (max-width: 480px) {
+	
+	.footer-container .first-footer {padding: 4px 0 0;}
+  .footer-body{
+    width: 90% !important;
+  }
+  .second-footer{
+    padding-top: 4px;
+  }
+  .footer-left{
+    font-size: 9px;
+  }
+}

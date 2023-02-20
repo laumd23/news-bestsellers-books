@@ -10,6 +10,11 @@ const books = (state,action)=>{
         ...state,
         fullBooks:action.payload,
       };
+    case 'GET_FORM_DATA':
+      return {
+        ...state,
+        formData: action.payload,
+      };
     default:
       return state;
   };

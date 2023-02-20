@@ -1,22 +1,24 @@
 import React, { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../Context/GlobalState';
 import './listBooks.scss';
-import '../../media-queries.scss';
+import '../../media-queries.scss';  
 
 const ListBooks = () => {
-  const { fullBooks, getFullOverview } = useContext(GlobalContext);
+  const { fullBooks, getFullOverview , formData} = useContext(GlobalContext);
+
 
   useEffect(() => {
     getFullOverview();
+    localStorage.setItem('form', JSON.stringify(formData));
   }, []);
 
   const print = fullBooks.map((book) => {
     const obj = [{ title: book.list_name, books: book.books }];
-    return obj.map((arrayBook) => {
+    return obj.map((arrayBook, index ) => {
       const titles = arrayBook.title;
       const library = arrayBook.books;
       return (
-        <div className='lists-full-overview'>
+        <div key={index} className='lists-full-overview'>
           <div className='category-title'>
             <h2>{titles}</h2>
           </div>

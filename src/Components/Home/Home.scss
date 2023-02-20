@@ -33,6 +33,7 @@
   align-items: center;
   background-color: white;
   width: 250px;
+  border-radius: 10px;
 
   h4 {
     color: $link-color;
@@ -51,12 +52,14 @@
     padding: 10px 5px 5px;
 
     .author {
+      font-size: 15px;
       font-weight: bold;
       color: $link-color;
       padding: 8px 0;
     }
 
     a {
+      font-size: 15px;
       padding: 10px;
       color: $hover-color;
       font-weight: $font-weight;
