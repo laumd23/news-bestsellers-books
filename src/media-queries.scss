@@ -1,0 +1,70 @@
+
+@media only screen and (min-width: 1920px) {
+	body {font-size: 22px;}
+	.main-header .header-wrapper {width: 57%;}
+}
+
+@media only screen and (max-width: 1919px) {
+	body {font-size: 20px;}
+	.main-header .header-wrapper {width: 60%;}
+}
+
+@media only screen and (max-width: 1680px) {
+	body {font-size: 18px;}
+	.main-header .header-wrapper {width: 65%;}
+}
+
+@media only screen and (max-width: 1366px) {
+	body {font-size: 16px;}
+	.main-header .header-wrapper {width: 70%;}
+}
+
+@media only screen and (max-width: 1120px) {
+	.main-header .header-wrapper .main-menu li {padding: 0.75em 1.4em;}
+}
+
+@media only screen and (max-width: 1024px) {
+	body {font-size: 14px;}
+	.main-header .header-wrapper .main-menu li {padding: 0.75em 1.3em;}
+}
+
+@media only screen and (max-width: 860px) {
+	.main-header .header-wrapper .main-menu li {padding: 0.75em 0.9em;}
+}
+
+@media only screen and (max-width: 768px) {
+	.main-header .header-wrapper .main-menu li {padding: 0.75em 0.5em;}
+}
+
+@media only screen and (max-width: 650px) {.main-header .header-wrapper {width: 95%;}}
+
+@media only screen and (max-width: 480px) {
+	.main-header .header-wrapper {width: 97%;}
+	.main-logo{
+		width: 40%;
+		padding-bottom: 2px;
+		img{
+			content: url('/logo-responsive-2.png');
+			width: 30% !important;
+		}
+	}
+  .category-title{
+    h2{
+      font-size: 1.4em;
+    }
+  }
+	.main-header .header-wrapper .main-menu li {padding: 0.2em 0.3em;}
+	.main-header .header-wrapper .main-menu li:last-child,
+	.main-header .header-wrapper .main-menu li:nth-child(6) {padding: 0.2em 0.7em;}
+	
+	.footer-container .first-footer {padding: 4px 0 0;}
+  .footer-body{
+    width: 90% !important;
+  }
+  .second-footer{
+    padding-top: 4px;
+  }
+  .footer-left{
+    font-size: 9px;
+  }
+}

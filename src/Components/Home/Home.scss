@@ -1,0 +1,65 @@
+@import '../../color-and-font.scss';
+
+.home-container {
+  font-family: $main-font;
+
+  .principal-title {
+    padding-top: 30px;
+    margin-top: 25px;
+
+    h1 {
+      font-size: 2.5em;
+      color: $other-color;
+      text-decoration: overline underline;
+      text-shadow: 1px 1px 2px black;
+    }
+  }
+
+  .container-books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+
+  }
+}
+
+.book-container {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 250px;
+
+  h4 {
+    color: $link-color;
+    font-size: 16px;
+  }
+
+  img {
+    width: 215px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 2px 50px -8px rgb(0 0 0 / 44%);
+
+  }
+
+  .author-link-container {
+    padding: 10px 5px 5px;
+
+    .author {
+      font-weight: bold;
+      color: $link-color;
+      padding: 8px 0;
+    }
+
+    a {
+      padding: 10px;
+      color: $hover-color;
+      font-weight: $font-weight;
+    }
+  }
+}

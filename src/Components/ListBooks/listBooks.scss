@@ -1,0 +1,31 @@
+@import '../../color-and-font.scss';
+
+.list-all-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  flex-direction: column;
+  .lists-full-overview{
+    display: flex;
+    flex-direction: column;
+    .category-title{
+      display: flex;
+      justify-content: center;
+      color: $other-color;
+      font-family: $main-font;
+      padding-top: 25px;
+      h2{
+        padding: 5px;
+        width: max-content;
+        background-color: black;
+        border-radius: 10px;
+      }
+    }
+    .books-by-category{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}
