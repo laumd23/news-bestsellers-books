@@ -12,18 +12,14 @@ const ListBooks = () => {
     localStorage.setItem('form', JSON.stringify(formData));
   }, []);
 
-  const print = fullBooks.map((book) => {
-    const obj = [{ title: book.list_name, books: book.books }];
-    return obj.map((arrayBook, index ) => {
-      const titles = arrayBook.title;
-      const library = arrayBook.books;
+  const print = fullBooks.map((category, index) => {
       return (
         <div key={index} className='lists-full-overview'>
           <div className='category-title'>
-            <h2>{titles}</h2>
+            <h2>{category.list_name}</h2>
           </div>
           <div className='books-by-category'>
-            {library.map((bookLibrary, index) => {
+            {category.books.map((bookLibrary, index) => {
               return (
                 <div key={index} className='book-container'>
                   <h4>{bookLibrary.title}</h4>
@@ -37,7 +33,6 @@ const ListBooks = () => {
           </div>
         </div>
       )
-    })
   })
 
   return (
