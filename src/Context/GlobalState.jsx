@@ -20,9 +20,9 @@ export const GlobalProvider = ({ children }) => {
       const res = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/overview?api-key=${API_KEY}`);
       dispatch({
         type: 'GET_BOOKS',
-        payload: res.data.results.lists[9].books,
+        payload: res.data.results.lists,
       })
-      console.log(res.data.results.lists[9].books);
+      console.log(res.data.results.lists);
     } catch (error) {
       console.error(error);
     }
@@ -36,7 +36,6 @@ export const GlobalProvider = ({ children }) => {
         type: 'GET_FULL_BOOKS',
         payload: res.data.results.lists
       })
-      console.log(res.data.results.lists);
     }catch(error){
       console.error(error);
     }
