@@ -3,7 +3,6 @@ import AppReducer from './AppReducer';
 import axios from 'axios';
 
 const initialState = {
-  books: [],
   fullBooks: [],
   formData: {},
 };
@@ -19,10 +18,9 @@ export const GlobalProvider = ({ children }) => {
     try {
       const res = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/overview?api-key=${API_KEY}`);
       dispatch({
-        type: 'GET_BOOKS',
+        type: 'GET_FULL_BOOKS',
         payload: res.data.results.lists,
       });
-      console.log(res.data.results.lists);
     } catch (error) {
       console.error(error);
     };
@@ -50,9 +48,8 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider
       value={{
-        books: state.books,
-        getOverview,
         fullBooks: state.fullBooks,
+        getOverview,
         getFullOverview,
         formData: state.formData,
         getFormData
