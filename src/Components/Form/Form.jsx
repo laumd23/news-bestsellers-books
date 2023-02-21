@@ -5,7 +5,7 @@ import './form.scss';
 
 
 const Form = () => {
-  const { getFormData } = useContext(GlobalContext)
+  const { getFormData } = useContext(GlobalContext);
   const navigate = useNavigate();
 
   const dataHandler = (e) => {
@@ -25,7 +25,7 @@ const Form = () => {
             <label htmlFor="username">Name</label>
             <input type="text" placeholder="Name" id="username" name="username" required />
             <label htmlFor="bookName">Book Name</label>
-            <input type="text" placeholder="Book name" id="bookName" name="bookName" required/>
+            <input type="text" placeholder="Book name" id="bookName" name="bookName" required />
             <label htmlFor="comments">Comments</label>
             <textarea placeholder="Comments" id="comments" name="comments" cols="30" rows="10" required></textarea>
             <input type="submit" value="Send" />
@@ -33,7 +33,7 @@ const Form = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Form;

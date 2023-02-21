@@ -25,13 +25,13 @@ const Home = () => {
                   <div className='author'>Autor: {books.author}</div>
                   <a href={books.amazon_product_url}> Cómpralo por Amazon</a>
                 </div>
-              </div>)
-          })}
+              </div>
+            );
+          })};
         </div>
       </div>
-    )
-  })
-
+    );
+  });
 
   return (
     <div className='home-container'>
@@ -42,8 +42,7 @@ const Home = () => {
         {print}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
-
+export default Home;
